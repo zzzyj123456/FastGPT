@@ -72,6 +72,7 @@ COPY --from=mainDeps /app/node_modules/@zilliz/milvus2-sdk-node ./node_modules/@
 COPY --from=builder /app/projects/app/package.json ./package.json 
 # copy config
 COPY ./projects/app/data /app/data
+COPY ./projects/app/src /app/projects/app/src
 
 RUN chown -R nextjs:nodejs /app/data
 
